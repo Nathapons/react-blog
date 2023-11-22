@@ -53,6 +53,6 @@ export default function BlogTable() {
     useEffect(() => {getBlog()}, [])
 
     return (
-        <Table dataSource={blog} columns={columns} style={{width: "60%"}}/>
+        <Table dataSource={blog} columns={columns} />
     )
 }
