@@ -5,7 +5,7 @@ export default function BlogBreadCrumb(props) {
     const dataArtr = props.data
 
     return (
-        <Breadcrumb>
+        <Breadcrumb style={{paddingTop: "10px"}}>
             {dataArtr.map((item, index) => {
                 return <Breadcrumb.Item>{item}</Breadcrumb.Item>
             })}
