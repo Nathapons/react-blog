@@ -6,7 +6,7 @@ export default function BlogTable() {
     const [blog, setBlog] = useState([])
 
     const getBlog = () => {
-        axios.get("http://localhost:8000/api/v1/blog").then(res => {
+        axios.get(`${import.meta.env.VITE_API_URL}/api/v1/blog`).then(res => {
             const data = res.data.result.map((item, index) => {
                 return {
                     ...item,
@@ -53,6 +53,6 @@ export default function BlogTable() {
     useEffect(() => {getBlog()}, [])
 
     return (
-        <Table dataSource={blog} columns={columns} />
+        <Table dataSource={blog} columns={columns} style={{textAlign: "center"}}/>
     )
 }
