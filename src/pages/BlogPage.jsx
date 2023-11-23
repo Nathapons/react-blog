@@ -9,7 +9,7 @@ export default function BlogPage() {
   return (
     <Layout style={{marginTop: "0"}}>
         <Navbar />
-        <BlogBreadCrumb data={["Home", "Blog"]}/>
+        <BlogBreadCrumb dataArr={["Home", "Blog"]}/>
         <Content>
             <BlogTable />
         </Content>
